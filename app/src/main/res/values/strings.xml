@@ -1,0 +1,11 @@
+<resources>
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <item name="android:title">@string/app_name</item>
+    </style>
+    <string name="app_name">Netclan Explorer</string>
+    <string-array name="sort_options">
+        <item>Most Recent</item>
+        <item>Distance</item>
+        <item>Price</item>
+    </string-array>
+</resources>

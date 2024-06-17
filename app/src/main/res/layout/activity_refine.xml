@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#819eae"
+
+
+    tools:context=".RefineActivity">
+
+    <TextView
+        android:id="@+id/titleRefine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Refine Search"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Category Filter -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkHyperlocal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hyperlocal Connections" />
+
+            <CheckBox
+                android:id="@+id/checkJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Job Listings" />
+
+            <CheckBox
+                android:id="@+id/checkSearchResults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search Results" />
+
+            <!-- Sort Options -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sort By"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioMostRecent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Most Recent" />
+
+                <RadioButton
+                    android:id="@+id/radioDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance" />
+
+                <RadioButton
+                    android:id="@+id/radioPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price" />
+            </RadioGroup>
+
+            <!-- Price Range -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price Range"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <SeekBar
+                android:id="@+id/seekBarPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="1000" />
+
+            <!-- Ratings -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ratings"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0" />
+
+            <!-- Additional Filters -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Additional Filters"
+                android:textSize="18sp"
+                android:layout_marginTop="16dp" />
+
+            <CheckBox
+                android:id="@+id/checkOnSale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="On Sale" />
+
+            <CheckBox
+                android:id="@+id/checkNewArrivals"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Arrivals" />
+
+            <CheckBox
+                android:id="@+id/checkFreeShipping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Free Shipping" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonApplyFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Apply Filters"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonResetFilters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Filters"
+        android:layout_marginTop="8dp" />
+
+
+</LinearLayout>
